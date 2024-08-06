@@ -127,7 +127,7 @@ At SentinelTech, we provide effective cybersecurity measures to help businesses 
           <h3>Jaydev Vala</h3>
           <p class="w3-opacity">CEO & Founder</p>
           <p>CEO and Sr Cybersecurity engineer at SentinelTech with 8 years of experience in the cybersecurity industry.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <p><button id="emailButton" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
@@ -137,7 +137,7 @@ At SentinelTech, we provide effective cybersecurity measures to help businesses 
           <h3>Pruthvi Dhadhal</h3>
           <p class="w3-opacity">COO</p>
           <p>Overseeing operations and ensuring the seamless delivery of cutting-edge cybersecurity solutions at SentinelTech.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <p><button id="emailButton" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
@@ -147,7 +147,7 @@ At SentinelTech, we provide effective cybersecurity measures to help businesses 
           <h3>Mike Ross</h3>
           <p class="w3-opacity">Network Engineer</p>
           <p>Network Engineer specializing in designing and securing robust network infrastructures to protect against cyber threats.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <p><button id="emailButton" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
@@ -157,7 +157,7 @@ At SentinelTech, we provide effective cybersecurity measures to help businesses 
           <h3>Ryan Brodrecht</h3>
           <p class="w3-opacity">Security Analyst</p>
           <p>Security analyst at SentinelTech with expertise in firewalls, network security and information assurance.</p>
-          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+          <p><button id="emailButton" class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
         </div>
       </div>
     </div>
@@ -205,7 +205,7 @@ At SentinelTech, we provide effective cybersecurity measures to help businesses 
           <span class="w3-opacity">per month</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+          <button id="emailButton" class="w3-button w3-black w3-padding-large">Sign Up</button>
         </li>
       </ul>
     </div>
@@ -222,7 +222,7 @@ At SentinelTech, we provide effective cybersecurity measures to help businesses 
           <span class="w3-opacity">3 months</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+          <button id="emailButton" class="w3-button w3-black w3-padding-large">Sign Up</button>
         </li>
       </ul>
     </div>
@@ -240,7 +240,7 @@ At SentinelTech, we provide effective cybersecurity measures to help businesses 
           <span class="w3-opacity">Annual</span>
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+          <button id="emailButton" class="w3-button w3-black w3-padding-large">Sign Up</button>
         </li>
       </ul>
     </div>
@@ -262,7 +262,7 @@ At SentinelTech, we provide effective cybersecurity measures to help businesses 
       <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
       <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
       <p>
-        <button class="w3-button w3-black" type="submit">
+        <button id="emailButton" class="w3-button w3-black" type="submit">
           <i class="fa fa-paper-plane"></i> SEND MESSAGE
         </button>
       </p>
@@ -311,6 +311,17 @@ function w3_open() {
 function w3_close() {
     mySidebar.style.display = "none";
 }
+// Email button
+
+ document.getElementById('emailButton').addEventListener('click', function() {
+            const email = 'sentineltech.ca@gmail.com';
+            const subject = 'Inquiry';
+            const body = '';
+            const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+            window.location.href = mailtoLink;
+        });
+	
 </script>
 
 </body>
